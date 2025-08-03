@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myH"></h1>
+    <p id="myP"></p>
+    <script>
+        //My heading:
+        document.getElementById("myH").innerHTML ="JavaScript Comments";
+        //My Paragaraph
+        document.getElementById("myP").innerHTML ="My first paragaraph";
+    </script>
+    <h1>JavaScript Variables</h1>
+    <p>Sum of two Numbers</p>
+    <p id="result"></p>
+    <script>
+        var num1 = 5;
+        var num2 = 6;
+        var sum = num1 + num2;
+         document.getElementById("result").innerHTML ="The total sum is:" + sum;
+    </script>
+    <h2>JavaScript Statements</h2>
+    <p>A <b>JavaScript progress</b> is a list of <b>statements</b> to be executed by a computer.</p>
+    <p id="demo"></p>
+    <script>
+        var x,y,z; // statement 1
+        x = 5;    //  statement 2
+        y = 6;   //   statement 3
+        z = x + y; //Statement  4
+        document.getElementById("demo").innerHTML ="The value of z is" + z +".";
+    </script>
+    <h2>Operator</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        <!--Addition-->
+        //*use +, -, *, /operators*//
+        var x = 5;
+        var y = 2;
+        var z = x + y;
+        var a = x - y;
+        var b = x * y;
+        var c = x / y;
+         document.getElementById("demo").innerHTML = z;
+         document.getElementById("demo1").innerHTML = a;
+         document.getElementById("demo2").innerHTML = b;
+         document.getElementById("demo3").innerHTML = c;
+
+         //assignment operator//
+         x +=4;
+         document.getElementById("demo4").innerHTML = x;
+          
+    </script>
+
+</body>
+</html>
