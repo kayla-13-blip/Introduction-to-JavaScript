@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM!!!</title>
+</head>
+<body>
+    <h1 id="one">Welcome</h1>
+    <p>This is the welcome message.</p>
+    <h2>Technology</h2>
+    <p>This is the technology section</p>
+    <script>
+        var text = document.getElementById("one").innerHTML;
+        alert("The first haeding is " + text);
+    </script>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <p>Adding JS as a separate file</p>
+    <button type="button" onclick="myFunction()">Click Me!</button>
+    <p id="demo"></p>
+    <script scr="script.js">
+    </script>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       <h1>REAL TIME VALIDATION USING JS</h1> 
+       <hr>
+       <form id="loginForm" onsubmit="validate(event)">
+        <fieldset>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="12" max="50">
+            </div>
+            <button type="submit">Login</button>
+        </fieldset>
+       </form>
+       <div id="message"></div>
+       <script src="script.js"></script>
+    </body>
+    </html>
+</body>
+</html>
