@@ -1,39 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Bootstrap CSS -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+<!-- My CSS -->
+
+<link rel="stylesheet" href="style4.css" />
+
+<!-- Font Awesome -->
+
+<script src="https://kit.fontawesome.com/996973c893.js"></script>
+
+<!-- Google Fonts -->
+
+<link
+
+href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap"
+
+rel="stylesheet" />
+
+<title>Portfolio</title>
+
 </head>
 <body>
-    <button onclick="multiply(4)">Click Me!</button>
-    <p id="result"></p>
-    <script>
-        function multiply(a, b)
-        {
-            if(b === undefined)
-            {
-                alert("The value of b is undefined");
-                b=5;
-            }
-            var result =a * b;
-            document.getElementById("result").innerHTML = result;
-        }  
-    </script>
-    <button onclick="multiply(9)">Click Me!</button>
-    <p id="result1"></p>
-    <script>
-        function multiply1(a, b)
-        {
-            if(b === undefined)
-            {
-                alert("The value of b is undefined");
-                b=7;
-            }
-            var result =a * b;
-            document.getElementById("result1").innerHTML = result1;
-        }  
-    </script>
-    
+    <div id="projects" class="container mt-5 pt-5">
+        <h1 class="text-warning mb-3 pb-2">My Projects</h1>
+        <div class="row">
+        <div class="col-4 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="download.svg" class="card-img-top" style="height: 13rem;" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Messaging Web App</h5>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-warning">See Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="download.svg" class="card-img-top" style="height: 13rem;" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Messaging Web App</h5>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-warning">See Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="download.svg" class="card-img-top" style="height: 13rem;" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Messaging Web App</h5>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-warning">See Project</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
 </body>
 </html>

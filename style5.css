@@ -1,0 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Baloo Tamma 2",cursive;
+}
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+    background-image:url("https://news.harvard.edu/wp-content/uploads/2018/01/musicstudy.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}

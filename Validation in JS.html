@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["fname"].value;
+                if (x == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+                else
+                document.write("Name submitted");
+            }
+        </script>
+    </head>
+<body>
+   <form name="myForm" onsubmit="validateForm()">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+     <p id="message"></p>
+   </form> 
+   <p>Enter a number and click OK:</p>
+   <input id="id1" type="number" min="150" max="200" required>
+   <button onclick="myFunction()">OK</button>
+</body>
+<P>If the number is lessthan 150 or greater than 200, an error message will be displayed.</P>
+<p id="result"></p>
+<script>
+    function myFunction() {
+        var inpobj = document.getElementById("id1");
+        if (!inpobj.checkValidity()) {
+        document.getElementById("result").innerHTML = inpobj.validationMessage;
+        } else{
+            document.getElementById("result").innerHTML = "Input OK";
+        }
+    }
+</script>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Calculator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet1" />
+  <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+   <div class="wrapper"></div> 
+   <div class="container"></div>
+   <h1>Calculator</h1>
+   <div class="row">
+    <input type="text" name="result3" class="result3" id="result3" value="" placeholder="Result" readonly />
+    <input type="button" value="+" onclick="setScreenValue('+')"/>
+    <input type="button" value="1" onclick="setScreenValue('1')"/>
+    <input type="button" value="2" onclick="setScreenValue('2')"/>
+    <input type="button" value="3" onclick="setScreenValue('3')"/>
+    <input type="button" value="-" onclick="setScreenValue('-')"/>
+   </div>
+   <div class="row">
+    <input type="button" value="4" onclick="setScreenValue('4')"/>
+    <input type="button" value="5" onclick="setScreenValue('5')"/>
+    <input type="button" value="6" onclick="setScreenValue('6')"/>
+    <input type="button" value="x" onclick="setScreenValue('*')"/>
+   </div>
+   <div class="row">
+    <input type="button" value="7" onclick="setScreenValue('7')"/>
+    <input type="button" value="8" onclick="setScreenValue('8')"/>
+    <input type="button" value="9" onclick="setScreenValue('9')"/>
+    <input type="button" value="/" onclick="setScreenValue('/')"/>
+   </div>
+   <div class="row">
+    <input type="button" value="%" onclick="setScreenValue('%')"/>
+    <input type="button" value="0" onclick="setScreenValue('0')"/>
+    <input type="button" value="." class="dot" onclick="setScreenValue('.')"/>
+    <input type="button" value="=" onclick="calculateResult('*')"/>
+   </div>
+   <div class="row">
+    <input type="button" value="CLEAR" onclick="clearScreen()" id="clear" class="clear-button"/>
+   </div>
+   <script>
+    function clearScreen() {
+        document.getElementById("result3").value = "";
+    }
+    function setScreenValue(value){
+        document.getElementById("result3").value += value;
+    }
+    function CalculatorResult() {
+        const resultElement = document.getElementById("result3");
+        const expression = resultElement.value.trim();
+        if (expression === '') {
+        resultElement.value = 'Enter an expression';
+        return;
+        }
+        try {
+            resultElement.value = eval (expression);
+        }catch (e) {
+            resultElement.value = 'Invalid expression';
+        }
+    }
+   </script>
+</body>
+</html>

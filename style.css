@@ -1,0 +1,21 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: blue;
+}
+.nav-link:hover {
+    text-decoration: none;
+    background-color: red;
+    transition: 0.5s ease;
+}
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+    background-image: url("https://miro.medium.com/1*V-Jp13LvtVc2IiY2fp4qYw.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+}

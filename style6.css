@@ -1,0 +1,17 @@
+#social-media {
+    background: #313552;
+}
+.mediA-link {
+    padding: 1rem;
+    max-width: 15rem;
+    margin-left: 1rem;
+    border: 2px solid #f5ba09;
+    border-radius: 0.5rem;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: green;
+    font-family: "Baloo Tamma 2", cursive;
+}
