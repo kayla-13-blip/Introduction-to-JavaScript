@@ -1,0 +1,66 @@
+body {
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aqua;
+    margin: 0;
+}
+.bank-app {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 30px 40px;
+    border-radius: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.transaction-container {
+    margin-bottom: 20px;
+}
+#transaction-amount {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: right;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.credit-btn, .debit-btn {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.credit-btn {
+    background-color: #4CAF50;
+}
+.credit-btn:hover {
+    background-color: #45a049;
+}
+.debit-btn {
+    background-color: #f44336;
+}
+.debit-btn :hover {
+    background-color: #da190b;
+}
+.balance-info {
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+}
