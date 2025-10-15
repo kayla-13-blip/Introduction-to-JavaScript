@@ -50,5 +50,59 @@
         </section>
     </main>
 </div>
+<form id="transaction-forms">
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" required step="0.01"/>
+    <div id="amount-error" class="error"></div>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required/>
+    <div id="date-error" class="error"></div>
+    <label for="category">Category:</label>
+    <select id="category" name="category" required>
+        <option value="">-- Select a Category --</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+    <div id="category-error" class="error"></div>
+    <button type="submit">Add Transaction</button>
+</form>
+<script>
+    const form = document.getElementById("transaction-forms");
+    const amountInput = document.getElementById("amount");
+    const dateInput = document.getElementById("date");
+    const categoryInput = document.getElementById("category");
+    const amountError = document.getElementById("amount-error");
+    const dateError = document.getElementById("date-error");
+    const categoryError = document.getElementById("category-error");
+    form.addEventListener("submit", function(event){
+        let isValid = true;
+        // Clear previous error
+        amountError.textContent="";
+    dateError.textContent="";
+categoryError.textContent="";
+
+// Amount validation
+const amount = parseFloat(amountInput.value);
+if (isNaN(amount) || amount <= 0){
+    amountError.textContent = "please enter a positive amount."
+    isValid = false;
+}
+// Date validation
+const transactionDate = new Date(dateInput.value);
+const today = new Date();
+if (transactionDate > today) {
+    dateError.textContent = "Transaction date cannot be in the future.";
+    isValid = false;
+}
+// Category validation
+if (categoryInput.value === "") {
+    categoryError.textContent = "please select a category.";
+    isValid = false;
+}
+if (!isValid) {
+    event.preventDefault(); // Stop form submissin
+}
+});
+</script>
 </body>
 </html>
